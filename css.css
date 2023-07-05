@@ -1,0 +1,79 @@
+* {
+  margin: 10px;
+  /* padding: 10px; */
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(232, 209, 162);
+
+  align-items: center;
+  /* display: flex; */
+  align-content: center;
+  font-size: 16px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(135deg, #153677, #4e085f);
+
+  /* background-color: beige; */
+}
+.ingredients {
+  box-sizing: border-box;
+
+  /* height: 400px;
+  width: 450px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .Burger {
+  box-sizing: border-box;
+
+  height: 620px;
+  width: 450px;
+} */
+/* .main-field {
+  width: 100%;
+  height: 100%;
+} */
+.ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  /* background-color: blue; */
+}
+li {
+  width: 300px;
+  height: 20px;
+  margin: 3px;
+  background-color: brown;
+  border-radius: 50px;
+}
+.ingredient:nth-child(1) {
+  background-color: rgb(222, 222, 210);
+}
+.ingredient:nth-child(2) {
+  background-color: rgba(243, 92, 92, 0.825);
+}
+.ingredient:nth-child(3) {
+  background-color: rgba(20, 186, 20, 0.749);
+}
+.ingredient:nth-child(4) {
+  background-color: rgba(255, 0, 0, 0.778);
+}
+.ingredient:nth-child(5) {
+  background-color: rgb(207, 220, 232);
+}
+.ingredient:nth-child(6) {
+  background-color: rgba(225, 88, 88, 0.797);
+}
+.ingredient:nth-child(7) {
+  background-color: rgb(246, 246, 148);
+}
