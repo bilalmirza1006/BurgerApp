@@ -22,8 +22,8 @@ var ul = document.createElement("ul")
 
 inGredients.forEach((item) => {
     var li = document.createElement("li")
-    // li.style.listStyle = 'none'
-    // li.style.textAlign = 'center'
+    li.style.listStyle = 'none'
+    li.style.textAlign = 'center'
     li.textContent = item
     li.addEventListener('click', () => { addBurger(item); })
     ul.appendChild(li)
@@ -32,16 +32,53 @@ inGredients.forEach((item) => {
 ingredients.appendChild(ul)
 
 const addBurger = (clickedIngredient) => {
-    useInGradients.push(clickedIngredient)
+    const index = useInGradients.indexOf(clickedIngredient);
+    if (index !== -1) {
+        useInGradients.splice(index, 1);
+    } else {
+        useInGradients.push(clickedIngredient);
+    }
     ulBurger.innerHTML = ''
     useInGradients.forEach((newElement) => {
         console.log('new', useInGradients)
         var li = document.createElement("li")
-        // li.style.listStyle = 'none'
+        li.style.listStyle = 'none'
         li.textContent = newElement
         ulBurger.appendChild(li)
     })
 }
+
+// var inGredients = ['Mayonnaise', 'Ketchup', 'Salad', 'Tomato', 'Egg', 'Beef Stake', 'Cheese'];
+// var useInGradients = [];
+// var ingredients = document.getElementById("ingredients");
+// var ulBurger = document.getElementById("ulBurger");
+// var ul = document.createElement("ul");
+
+// inGredients.forEach((item) => {
+//     var li = document.createElement("li");
+//     li.textContent = item;
+//     li.addEventListener('click', () => {
+//         addBurger(item);
+//     });
+//     ul.appendChild(li);
+// });
+
+// ingredients.appendChild(ul);
+
+// const addBurger = (clickedIngredient) => {
+//     const index = useInGradients.indexOf(clickedIngredient);
+//     if (index !== -1) {
+//         useInGradients.splice(index, 1);
+//     } else {
+//         useInGradients.push(clickedIngredient);
+//     }
+//     ulBurger.innerHTML = '';
+//     useInGradients.forEach((newElement) => {
+//         var li = document.createElement("li");
+//         li.textContent = newElement;
+//         ulBurger.appendChild(li);
+//     });
+// };
 
 
 
