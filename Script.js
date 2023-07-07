@@ -36,7 +36,7 @@ const addBurger = (clickedIngredient) => {
     if (index !== -1) {
         useInGradients.splice(index, 1);
     } else {
-        useInGradients.push(clickedIngredient);
+        useInGradients.unshift(clickedIngredient);
     }
     ulBurger.innerHTML = ''
     useInGradients.forEach((newElement) => {

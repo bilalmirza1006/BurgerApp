@@ -1,82 +1,69 @@
 * {
-  margin: 10px;
-  /* padding: 10px; */
+  margin: 0;
+  padding: 0;
   font-family: "poppins", sans-serif;
   box-sizing: border-box;
 }
-body {
-  background-color: rgb(243, 236, 222);
 
-  align-items: center;
-  /* display: flex; */
-  align-content: center;
-  font-size: 16px;
+body {
+  margin: 3rem;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding-bottom: 20px;
+  /* border: 5px solid green; */
 }
 
 .main {
+  padding-bottom: 20px;
+}
+
+.main-field {
+  margin: 3rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  /* background: linear-gradient(135deg, #153677, #4e085f); */
-
-  background-color: rgb(229, 198, 167);
+  align-items: flex-start;
+  margin-bottom: 0;
+  border: 0.1rem solid rgb(99, 98, 98);
 }
-.ingredients {
-  box-sizing: border-box;
 
-  /* height: 400px;
-  width: 450px; */
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+legend {
+  margin-left: 0.5rem;
+  color: rgb(255, 255, 255);
 }
-/* .Burger {
-  box-sizing: border-box;
 
-  height: 620px;
-  width: 450px;
-} */
-/* .main-field {
-  width: 100%;
-  height: 100%;
-} */
-.ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  list-style: none;
-  /* background-color: blue; */
-}
 li {
-  width: 300px;
-  height: 20px;
-  margin: 3px;
-  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  height: 2rem;
+  margin: 0;
+  background-color: rgb(162, 61, 61);
   border-radius: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   text-align: center;
   list-style: none;
 }
-/* li:nth-child(1) {
-  background-color: rgb(222, 222, 210);
+
+/* @media screen and (max-width: 768px) {
+  .main-field {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  li {
+    width: 100%;
+    max-width: 15rem;
+  }
 }
-li:nth-child(2) {
-  background-color: rgba(243, 92, 92, 0.825);
-}
-li:nth-child(3) {
-  background-color: rgba(20, 186, 20, 0.749);
-}
-li:nth-child(4) {
-  background-color: rgba(255, 0, 0, 0.778);
-}
-li:nth-child(5) {
-  background-color: rgb(207, 220, 232);
-}
-li:nth-child(6) {
-  background-color: rgba(225, 88, 88, 0.797);
-}
-li:nth-child(7) {
-  background-color: rgb(246, 246, 148);
+@media screen and (min-width: 414px) {
+  .main-field {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  li {
+    width: 100%;
+    max-width: 15rem;
+  }
 } */
