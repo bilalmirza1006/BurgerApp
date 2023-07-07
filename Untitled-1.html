@@ -175,3 +175,44 @@
     <script src="Script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+var arrayOfIngredients = ['a', 'b', 'c', 'd', 'e', 'f'];
+var useInGradients = [];
+var ingredients = document.getElementById("ingredients");
+var ulBurger = document.getElementById("ulBurger");
+var burgerIngredients = document.getElementById("burgerIngredients");
+var ul = document.createElement("ul");
+
+arrayOfIngredients.forEach((item) => {
+    var li = document.createElement("li");
+    li.style.listStyle = 'none';
+    li.textContent = item;
+    li.addEventListener('click', () => {
+        addBurger(item);
+    });
+    ul.appendChild(li);
+});
+
+ingredients.appendChild(ul);
+
+const addBurger = (clickedIngredient) => {
+    useInGradients.push(clickedIngredient);
+    ulBurger.innerHTML = ''; // Clear the existing contents of ulBurger
+    useInGradients.forEach((newElement) => {
+        console.log('new', useInGradients);
+        var li = document.createElement("li");
+        li.style.listStyle = 'none';
+        li.textContent = newElement;
+        ulBurger.appendChild(li);
+    });
+};

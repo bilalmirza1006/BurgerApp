@@ -8,65 +8,40 @@ const Cheese = document.getElementById('Cheese')
 const burger = document.getElementById('burger')
 const hello = document.getElementById("hello")
 
-// var arrayOfIngredients = ['a', 'b', 'c', 'd', 'e', 'f']
-// var ingredients = document.getElementById("ingredients");
-// var burgarIngredients = document.getElementById(burgarIngredients)
-// var ul = document.createElement("ul")
-// ul.addEventListener('click', addBurger)
+// var arrayOfIngredients = new Array();
 
-// arrayOfIngredients.forEach(function (item) {
-//     var li = document.createElement("li");
-//     li.style.listStyle = 'none'
-//     li.textContent = item;
-//     ul.appendChild(li);
-// });
-// ingredients.appendChild(ul)
+// arrayOfIngredients[0] = new Image();
+// arrayOfIngredients[0].src = './image/new,jpg';
 
 
-// function addBurger() {
-//     alert()
-//     var li = document.createElement("li");
-//     li.style.listStyle = 'none'
-//     li.textContent = item;
-//     ul.appendChild(li);
-// }
-// burgarIngredients.appendChild(ul)
-
-
-
-
-
-
-
-var arrayOfIngredients = ['a', 'b', 'c', 'd', 'e', 'f'];
+var inGredients = ['Mayonnaise', 'Ketchup', 'Salad', 'Tomato', 'Egg', 'Beef Stake', 'Cheese']
 var useInGradients = []
-var ingredients = document.getElementById("ingredients");
-var burgerIngredients = document.getElementById("burgerIngredients"); // Corrected the variable name
-var ul = document.createElement("ul");
-// ul.addEventListener('click', addBurger);
-var li = document.createElement('li')
+var ingredients = document.getElementById("ingredients")
+var ulBurger = document.getElementById("ulBurger")
+var ul = document.createElement("ul")
 
-arrayOfIngredients.forEach(function (item) {
-    var li = document.createElement("li");
-
-    li.addEventListener('click', () => addBurger(item));
-    li.style.listStyle = 'none';
-    li.textContent = item;
-    ul.appendChild(li);
-    // ul.ad
+inGredients.forEach((item) => {
+    var li = document.createElement("li")
+    // li.style.listStyle = 'none'
+    // li.style.textAlign = 'center'
+    li.textContent = item
+    li.addEventListener('click', () => { addBurger(item); })
+    ul.appendChild(li)
 });
-ingredients.appendChild(ul);
 
+ingredients.appendChild(ul)
 
-function addBurger(item) { // Added the event parameter
-    alert(JSON.stringify(item))
-    console.log('new', item, item.PointerEvent);
-    useInGradients.push(item)
-    var li = document.createElement("li");
-    li.style.listStyle = 'none';
-    li.textContent = clickedIngredient;
+const addBurger = (clickedIngredient) => {
+    useInGradients.push(clickedIngredient)
+    ulBurger.innerHTML = ''
+    useInGradients.forEach((newElement) => {
+        console.log('new', useInGradients)
+        var li = document.createElement("li")
+        // li.style.listStyle = 'none'
+        li.textContent = newElement
+        ulBurger.appendChild(li)
+    })
 }
-burgerIngredients.appendChild(li);
 
 
 
@@ -75,141 +50,77 @@ burgerIngredients.appendChild(li);
 
 
 
+// var arrayOfIngredients = ['a', 'b', 'c', 'd', 'e', 'f'];
+// var useInGradients = [];
+// var ingredients = document.getElementById("ingredients");
+// var ulBurger = document.getElementById("ulBurger");
+// var ul = document.createElement("ul");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let li = document.createElement("li");
-// // let li1 = document.createElement("li");
-// li.innerHTML = burger.value;
-// listContainer.appendChild(li);
-// // let span = document.createElement("span");
-// // span.innerHTML = "\u00d7";
-// // li.appendChild(span);
-// const myValue = 'hellosds'
-// hello.innerHTML = myValue;
-
-
-// const cars = ["Saab", "Volvo", "BMW"];
-// var text = "";
-// for (let i in cars) {
-//     text += cars[i] + "<br>";
-//     console.log(i + 1);
-// }
-// document.getElementById('outer').innerHTML = cars.map((item, index) => item)
-// // export const data = ['dds', 'sdsf']
-// // const arr = document.getElementById('Mayonnaise')
-// listContainer.addEventListener("click", function (e) {
-//     if (e.target.tagName === "LI") {
-//         e.target.classList.toggle("checked");
-//         savedata();
-//     } else if (e.target.tagName === "SPAN") {
-//         e.target.parentElement.remove();
-//         savedata();
-//     }
-// }, true);
-
-
-
-
-
-// // const ingradiants = [Mayonnaise, Salad,]
-
-
-// document.body.innerHTML = 'hallo'
-// const inputBox = document.getElementById("input-box");
-// const listContainer = document.getElementById("list-container");
-
-// let li = document.createElement("li");
-// li.innerHTML = 'inputBox';
-// let li = document.getElementsByClassName("header");
-// li.innerHTML = 'inputBox kjskdflksdjfl';
-
-
-
-// var arrayOfIngrediants = ['a', 'b', 'c', 'd', 'e', 'f']
-// var burgarIngrediants = document.getElementById("burgarIngrediants");
-// var ul2 = document.createElement("ul")
-// arrayOfIngrediants.forEach(function (item) {
+// arrayOfIngredients.forEach((item) => {
 //     var li = document.createElement("li");
+//     li.style.listStyle = 'none';
 //     li.textContent = item;
-//     ul2.appendChild(li);
+//     li.addEventListener('click', () => { addBurger(item); });
+//     ul.appendChild(li);
 // });
-// burgarIngrediants.appendChild(ul2)
 
-// function toggleCopy(item) {
-//     var ul2 = document.getElementById("ul2");
+// ingredients.appendChild(ul);
 
-//     if (item.parentNode === ul2) {
-//         ul2.removeChild(item);
-//     } else {
-//         var clonedItem = item.cloneNode(true);
-//         ul2.appendChild(clonedItem);
-//     }
+// const addBurger = (clickedIngredient) => {
+//     useInGradients.push(clickedIngredient);
+//     ulBurger.innerHTML = ''; // Clear the existing contents of ulBurger
+//     useInGradients.forEach((newElement) => {
+//         console.log('new', useInGradients);
+//         var li = document.createElement("li");
+//         li.style.listStyle = 'none';
+//         li.textContent = newElement;
+//         ulBurger.appendChild(li);
+//     });
+// };
+
+
+
+
+
+
+// const arrayOfIngredients = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+// document.getElementById('ingredients').innerHTML = `<ul>${arrayOfIngredients.map(item => `<li onclick = 'addli>${item}</li>`).join('')}</ul>`;
+
+
+// const arrayOfIngredients = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+// document.getElementById('ingredients').innerHTML = `<ul>${arrayOfIngredients.map(item => `<li onclick='addli()'>${item}</li>`).join('')}</ul>`;
+
+
+// function addli() {
+//     alert()
+//     console.log('new', item)
+//     document.getElementById('burgarIngredients').innerHTML = `<ul>${arrayOfIngredients.map(item => `<li>${item}</li>`).join('')}</ul>`;
 // }
 
-// var sourceArray = ['Item 1', 'Item 2', 'Item 3'];
-// var targetArray = [];
 
-// var currentIndex = 0;
-// var button = document.querySelector("button");
-// button.addEventListener("click", sendItem);
 
-// function sendItem() {
-//     if (currentIndex < sourceArray.length) {
-//         var item = sourceArray[currentIndex];
-//         targetArray.push(item);
-//         currentIndex++;
-//         console.log("Sent:", item);
-//     } else {
-//         console.log("All items sent.");
-//     }
+// const arrayOfIngredients = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+// document.getElementById('ingredients').innerHTML = `<ul>${arrayOfIngredients.map(item => `<li onclick=((event)=>{addli(event))'>${item}</li>`).join('')}</ul>`;
+
+// function addli(event) {
+//     console.log('new', event)
+//     const clickedIngredient = event.target.textContent;
+//     document.getElementById('burgerIngredients').innerHTML += `<li>${clickedIngredient}</li>`;
 // }
 
-// function toggleIngredient(item) {
-//     var burgerIngredients = document.getElementById("burgerIngredients");
 
-//     if (item.parentElement === document.getElementById("ingredients")) {
-//         // Copy ingredient to Your Burger
-//         burgerIngredients.appendChild(item.cloneNode(true));
-//         item.classList.add("selected");
-//     } else {
-//         // Remove ingredient from Your Burger
-//         burgerIngredients.removeChild(item);
-//         item.classList.remove("selected");
-//     }
+// const arrayOfIngredients = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+// document.getElementById('ingredients').innerHTML = `<ul>${arrayOfIngredients.map(item => `<li onclick="addli(event)">${item}</li>`).join('')}</ul>`;
+
+// function addli(event) {
+//     alert
+//     console.log('new', event);
+//     const clickedIngredient = event.target.textContent;
+//     document.getElementById('burgerIngredients').innerHTML += `<ul><li>${clickedIngredient}</li></ul>`;
 // }
+
 
