@@ -34,19 +34,6 @@ legend {
   color: rgb(255, 255, 255);
 }
 
-/* li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 18rem;
-  height: 2rem;
-  margin: 0;
-  background-color: rgb(162, 61, 61);
-  border-radius: 50px;
-  margin-bottom: 1rem;
-  text-align: center;
-  list-style: none;
-} */
 .button {
   position: absolute;
 }
@@ -55,6 +42,5 @@ legend {
   height: 5%;
   width: 10%;
   position: absolute;
-  /* border-radius: 50%; */
   border-radius: 50px;
 }

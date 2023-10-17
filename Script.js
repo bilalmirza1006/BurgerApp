@@ -1,17 +1,3 @@
-const Mayonnaise = document.getElementById('Mayonnaise')
-const Ketchup = document.getElementById('Ketchup')
-const Salad = document.getElementById('Salad')
-const Tomato = document.getElementById('Tomato')
-const Egg = document.getElementById('Egg')
-const BeefStake = document.getElementById('Beef-Stake')
-const Cheese = document.getElementById('Cheese')
-const burger = document.getElementById('burger')
-const hello = document.getElementById("hello")
-
-// var arrayOfIngredients = new Array()
-
-// arrayOfIngredients[0] = new Image()
-// arrayOfIngredients[0].src = './image/new,jpg'
 
 
 var inGredients = [
@@ -23,77 +9,76 @@ var inGredients = [
     { image: 'https://media.istockphoto.com/id/1063897876/photo/fried-egg-isolated.jpg?s=2048x2048&w=is&k=20&c=bZMHYndxx7xiYr4RgTxfeC0k4Uf7YacAokfMuvUESHg=', name: 'Egg' },
     { image: 'https://media.istockphoto.com/id/1220111207/photo/grilled-hamburger-meat-isolated-on-white-background-clipping-path-full-depth-of-field.jpg?s=2048x2048&w=is&k=20&c=776epoFO4JfruRzjDZ9wN-aFt-J55TtiHXt339EwliI=', name: 'Beef Stake' },
     { image: 'https://media.istockphoto.com/id/163137297/photo/four-cut-up-slices-of-cheese-isolated-on-a-white-background.jpg?s=2048x2048&w=is&k=20&c=ZxKSTlZbYPnKdOTe9StYmVCLbtgQtbY-11p3mRF7M8s=', name: 'Cheese' }
-];
+]
 
-var useInGradients = [];
-var ulBurger = document.getElementById('ulBurger');
-var ul = document.createElement('ul');
-var resetBtn = document.getElementById('resetBtn');
-resetBtn.addEventListener('click', reset);
+var useInGradients = []
+var ulBurger = document.getElementById('ulBurger')
+var ul = document.createElement('ul')
+var resetBtn = document.getElementById('resetBtn')
+resetBtn.addEventListener('click', reset)
 
 function reset() {
-    useInGradients = [];
-    ulBurger.innerHTML = '';
+    useInGradients = []
+    ulBurger.innerHTML = ''
 }
 
 inGredients.forEach((item) => {
-    var li = document.createElement('li');
-    li.style.listStyle = 'none';
-    li.style.textAlign = 'center';
+    var li = document.createElement('li')
+    li.style.listStyle = 'none'
+    li.style.textAlign = 'center'
 
-    var img = document.createElement('img');
-    img.src = item.image;
+    var img = document.createElement('img')
+    img.src = item.image
 
-    var text = document.createElement('span');
-    text.textContent = item.name;
+    var text = document.createElement('span')
+    text.textContent = item.name
 
+    img.style.width = '100px'
+    img.style.height = '50px'
 
-    img.style.width = '100px';
-    img.style.height = '50px';
-
-    li.appendChild(img);
-    li.appendChild(text);
+    li.appendChild(img)
+    li.appendChild(text)
 
     li.addEventListener('click', () => {
-        addBurger(item.name);
-    });
+        addBurger(item.name)
+    })
 
-    ul.appendChild(li);
-});
+    ul.appendChild(li)
+})
 
 
 
 ingredients.appendChild(ul)
 const addBurger = (clickedIngredient) => {
-    const index = useInGradients.indexOf(clickedIngredient);
+    const index = useInGradients.indexOf(clickedIngredient)
     if (index !== -1) {
-        useInGradients.splice(index, 1);
+        useInGradients.splice(index, 1)
     } else {
-        useInGradients.unshift(clickedIngredient);
+        useInGradients.unshift(clickedIngredient)
     }
 
-    ulBurger.innerHTML = '';
+    ulBurger.innerHTML = ''
 
     useInGradients.forEach((newElement) => {
-        const ingredientObj = inGredients.find(item => item.name === newElement);
+        const ingredientObj = inGredients.find(item => item.name === newElement)
 
         if (ingredientObj) {
-            const li = document.createElement("li");
-            li.style.listStyle = 'none';
+            const li = document.createElement("li")
+            li.style.listStyle = 'none'
 
-            const img = document.createElement("img");
-            img.src = ingredientObj.image;
-            img.alt = newElement;
-            img.style.width = "100px";
+            const img = document.createElement("img")
+            img.src = ingredientObj.image
+            img.alt = newElement
+            img.style.width = "100px"
 
-            const text = document.createElement("span");
-            text.textContent = newElement;
+            const text = document.createElement("span")
+            text.textContent = newElement
 
-            li.appendChild(img);
-            li.appendChild(text);
+            li.appendChild(img)
+            li.appendChild(text)
 
-            ulBurger.appendChild(li);
+            ulBurger.appendChild(li)
         }
-    });
+    })
 }
 
