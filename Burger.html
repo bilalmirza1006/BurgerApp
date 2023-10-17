@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css.css" />
 
-    <title>Burger</title>
-  </head>
-  <body>
-    <div class="main">
-      <fieldset class="main-field">
-        <legend>Made you'r burger is own choice</legend>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css.css" />
+
+  <title>Burger</title>
+</head>
+
+<body>
+  <div class="container">
+    <fieldset class="main-field">
+      <legend>Made you'r burger is own choice</legend>
+      <button id="resetBtn" type="button" class="btn">Reset</button>
+
+      <div>
         <fieldset class="main-field">
           <legend>Ingredients</legend>
           <div id="ingredients"></div>
         </fieldset>
+      </div>
+      <div>
         <fieldset class="main-field">
           <legend>You'r Burger</legend>
           <div class="burgarIngredients">
-            <div><li>Top Bun</li></div>
+            <div>
+              <ul style="list-style: none;">
+                <li>
+                  <img
+                    src="https://media.istockphoto.com/id/624987666/photo/homemade-burger-bun.jpg?s=2048x2048&w=is&k=20&c=et5CRJr-W0bkqxmtiZFksexfVceyfn1jEAaT8HY9G74="
+                    alt="Appetizing Bun with Sesame Seeds" height="50px" width="50px" />
+                </li>
+              </ul>
+            </div>
+
             <ul id="ulBurger"></ul>
-            <div><li>Bottom Bun</li></div>
+            <div>
+              <li><img height="50px" , width="50px"
+                  src="https://media.istockphoto.com/id/624987666/photo/homemade-burger-bun.jpg?s=2048x2048&w=is&k=20&c=et5CRJr-W0bkqxmtiZFksexfVceyfn1jEAaT8HY9G74="
+                  alt="Appetizing Bun with Sesame Seeds"></li>
+            </div>
           </div>
         </fieldset>
-      </fieldset>
+    </fieldset>
+  </div>
 
-      <script src="Script.js"></script>
-    </div>
-  </body>
+  <script src="Script.js"></script>
+</body>
+
 </html>
